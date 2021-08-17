@@ -20,6 +20,13 @@ export const selectCartIconCount = createSelector(
     )
 )
 
+export const selectCartTotalCheckout = createSelector(
+    [selectCartItems],
+    cartItems => cartItems.reduce(
+        (accumalateQuantity, cartItem) => accumalateQuantity + cartItem.quantity * cartItem.price, 0
+    )
+)
+
 //================This code below work and make the same result
 // const selelctCartItems = state => state.cart.cartItems;
 

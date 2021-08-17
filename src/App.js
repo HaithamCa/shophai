@@ -5,12 +5,13 @@ import { Switch, Link, Route, Redirect } from 'react-router-dom';
 import ShopPage from './pages/shop/shop.component';
 import Header from './components/header/header.component';
 import SignInAndSignUpPage from './pages/sign-in-and-sign-up-page/sign-in-and-sign-up-page.component';
+import CheckoutPage from './pages/checkout/checkout.component';
+
 import { auth, createUserProfileDocument, firestore } from './firebase/firebase.utils';
 import { connect } from 'react-redux';
 import { selectCurrentUser } from './redux/user/user.selector';
 import { createStructuredSelector } from 'reselect';
 import { setCurrentUser } from './redux/user/user.action';
-import { create } from 'istanbul-reports';
 
 
 class App extends React.Component {
@@ -49,6 +50,7 @@ class App extends React.Component {
           <Route exact path='/' component={HomePage} />
           <Route path='/shop' component={ShopPage} />
           <Route exact path='/signin' render={() => this.props.currentUser ? (<Redirect to='/' />) : (<SignInAndSignUpPage />)} />
+          <Route exact path='/checkout' component={CheckoutPage} />
         </Switch>
       </div>
     );

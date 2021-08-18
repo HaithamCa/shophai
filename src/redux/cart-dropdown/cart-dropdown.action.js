@@ -8,3 +8,8 @@ export const addItem = (item) => ({
     type: cartDropdownActionTypes.ADD_ITEM,
     payload: item
 })
+
+export const removeItemFromCart = (item) => ({
+    type: cartDropdownActionTypes.REMOVE_ITEM_FROM_CART,
+    payload: item
+})

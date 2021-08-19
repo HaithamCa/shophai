@@ -9,6 +9,11 @@ export const addItem = (item) => ({
     payload: item
 })
 
+export const reduceItem = (item) => ({
+    type: cartDropdownActionTypes.RREDUCE_ITEM,
+    payload: item
+})
+
 export const removeItemFromCart = (item) => ({
     type: cartDropdownActionTypes.REMOVE_ITEM_FROM_CART,
     payload: item

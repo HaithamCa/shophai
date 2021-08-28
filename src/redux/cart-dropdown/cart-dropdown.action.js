@@ -10,7 +10,7 @@ export const addItem = (item) => ({
 })
 
 export const reduceItem = (item) => ({
-    type: cartDropdownActionTypes.RREDUCE_ITEM,
+    type: cartDropdownActionTypes.REDUCE_ITEM,
     payload: item
 })
 

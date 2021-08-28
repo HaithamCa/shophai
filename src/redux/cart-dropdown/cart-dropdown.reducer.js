@@ -1,4 +1,3 @@
-import { removeItemFromCart, removeItemFronCart } from "./cart-dropdown.action"
 import { cartDropdownActionTypes } from "./cart-dropdown.types"
 import { addItemToCart, reduceItemFromCart } from "./cart.utils"
 
@@ -21,7 +20,7 @@ const cartReducer = (state = INITIAL_STATE, action) => {
                 cartItems: addItemToCart(state.cartItems, action.payload)
             }
 
-        case cartDropdownActionTypes.RREDUCE_ITEM:
+        case cartDropdownActionTypes.REDUCE_ITEM:
             return {
                 ...state,
                 cartItems: reduceItemFromCart(state.cartItems, action.payload)
